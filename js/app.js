@@ -51,15 +51,16 @@ form.addEventListener("submit", function(event){
 
   // Create location object
   const locationData = {
-    place : "",
-    latitude : "" ,
-    longitude : "",
+    place : place,
+    latitude : latitude,
+    longitude : longitude,
     createdAt : new Date(),
   };
   console.log(locationData);
   
   
 });
+
 
 
 
