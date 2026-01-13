@@ -58,8 +58,14 @@ form.addEventListener("submit", function(event){
   };
   console.log(locationData);
   
+  // connecting dataStores.js with app.js 
+  
+  dataStore.addLocation(locationData);
+  console.log(dataStore.getLocations());
+  
   
 });
+
 
 
 
