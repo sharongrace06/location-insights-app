@@ -7,4 +7,8 @@ const latitudeInput = document.getElementById("latitude");
 const longitudeInput = document.getElementById("longitude");
 const errorInput = document.getElementById("errorMessage");
 
+console.log(form);
+console.log(placeInput);
+
+
 
