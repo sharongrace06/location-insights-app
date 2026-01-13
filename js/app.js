@@ -56,9 +56,11 @@ form.addEventListener("submit", function(event){
     longitude : "",
     createdAt : new Date(),
   };
+  console.log(locationData);
   
   
 });
+
 
 
 
