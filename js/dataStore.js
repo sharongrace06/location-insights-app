@@ -3,13 +3,13 @@ const locations = [];
 
 // add location to locations array
 
-const function addLocation(location){
+function addLocation(location){
   locations.push(location);
 };
 
 
 // return all stored locations
-const function getLocations(){
+function getLocations(){
   return locations;
 };
 
@@ -17,3 +17,4 @@ window.dataStore = {
   addLocation : addLocation,
   getLocations : getLocations
 };
+
