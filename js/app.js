@@ -21,7 +21,27 @@ form.addEventListener("submit", function(event){
   const latitude = latitudeInput.value ;
   const longitude = longitudeInput.value ; 
   console.log(place, latitude, longitude)
+
+  // Validation
+  if(place.trim()){
+    errorInput.textContent = "Please add the Name of the Location";
+    return;
+  }else if(latitude.trim() && isNaN(latitude)){
+    errorInput.textContent = "Add a Latitude in Numbers";
+    return;
+    
+  }else if(longitude.trim() &&  isNaN(longitude)){
+    errorInput.textContent = "Add a Longitude in Numbers";
+    return; 
+  }else{
+
+    // If validation passes
+    errorInput.textContent = "";
+    console.log("Validation passed");
+  }
+  
 });
+
 
 
 
