@@ -15,7 +15,14 @@ console.log(placeInput);
 form.addEventListener("submit", function(event){
   event.preventDefault();
   console.log("Form submitted");
+  
+  // Read input values
+  const place = placeInput.value ;
+  const latitude = latitudeInput.value ;
+  const longitude = longitudeInput.value ; 
+  console.log(place, latitude, longitude)
 });
+
 
 
 
