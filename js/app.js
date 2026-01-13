@@ -48,9 +48,18 @@ form.addEventListener("submit", function(event){
   
   errorInput.textContent = "";
   console.log("Validation passed");
+
+  // Create location object
+  const locationData = {
+    place : "",
+    latitude : "" ,
+    longitude : "",
+    createdAt : new Date(),
+  };
   
   
 });
+
 
 
 
