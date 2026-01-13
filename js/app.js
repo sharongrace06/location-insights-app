@@ -10,5 +10,13 @@ const errorInput = document.getElementById("errorMessage");
 console.log(form);
 console.log(placeInput);
 
+// Handle form submission
+
+form.addEventListener("submit", function(event){
+  event.preventDefault();
+  console.log("Form submitted");
+});
+
+
 
 
