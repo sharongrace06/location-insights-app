@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang ="en">
+  <head>
+    <meta charset = "UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location Insights App</title>
+    <link rel="stylesheet" href = "css/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Location Insights App</h1>
+      <p>Track locations and visualize geographic insights</p>
+    </header>
+    <main>
+
+      
+      <section id="input-section">
+        <form> 
+          <input type="text" placeholder="Place name" id="placeName">
+          <input type="text" placeholder="Latitude" id="latitude"> 
+          <input type="text" placeholder="Longitude" id="longitude"> 
+          <button type="submit">Add</button>
+       
+        </form>
+        <p id="errorMessage"></p>
+      </section>
+
+
+      <!-- Map will be rendered here -->
+      <section id="map-section">
+        <div id="map">
+        
+        </div>
+      </section>
+
+      
+ <!-- Table will be rendered here -->
+      <section id="table-section">
+        <table>
+          <thead>
+            <tr>
+              <th>Place</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+              <th>Date Added</th>
+            </tr>
+            
+          </thead>
+          <tbody id="locationTableBody"> </tbody>
+        </table>
+      </section>
+      
+      <!-- Insights / Export will be rendered here --> 
+      <section id="insights-section">
+        <canvas></canvas>
+        <button>Download</button>
+      </section>
+      
+    </main>
+  </body>
+</html>
