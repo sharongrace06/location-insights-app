@@ -6,7 +6,7 @@ function renderTable(){
   // get the location
   const locations = dataStore.getLocations();
 
-  if(locations.length === ""){
+  if(locations.length === 0){
     const row = document.createElement("tr");
     const cell = document.createElement("td");
 
@@ -52,6 +52,7 @@ function renderTable(){
 window.tableRenderer = {
   renderTable: renderTable,
 };
+
 
 
 
