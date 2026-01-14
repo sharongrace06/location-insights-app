@@ -6,6 +6,7 @@ const placeInput = document.getElementById("placeName");
 const latitudeInput = document.getElementById("latitude");
 const longitudeInput = document.getElementById("longitude");
 const errorInput = document.getElementById("errorMessage");
+const table = document.getElementById("locationTableBody");
 
 console.log(form);
 console.log(placeInput);
@@ -65,6 +66,7 @@ form.addEventListener("submit", function(event){
   
   
 });
+
 
 
 
