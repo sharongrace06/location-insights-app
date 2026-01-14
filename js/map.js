@@ -9,7 +9,12 @@ function initMap(){
   map.setView([20.5937, 78.9629], 5);
 
   // 3. Attach a tile layer
-  //L.tileLayer()
+  L.tileLayer(
+  "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  {
+    attribution: "© OpenStreetMap contributors"
+  }).addTo(map);
+
 
   
 };
@@ -26,4 +31,5 @@ window.mapRenderer = {
   addMarker: addMarker,
   renderMarkers: renderMarkers
 };
+
 
