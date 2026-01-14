@@ -63,9 +63,10 @@ form.addEventListener("submit", function(event){
   
   dataStore.addLocation(locationData);
   console.log(dataStore.getLocations());
+  
+  mapRenderer.addMarker(locationData);
 
-  
-  
+
   // to clear out the input fields in the form once a value is added. 
 
   placeInput.value = "";
@@ -78,6 +79,7 @@ form.addEventListener("submit", function(event){
 
   tableRenderer.renderTable();
   mapRenderer.initMap();
+
 
 
 
