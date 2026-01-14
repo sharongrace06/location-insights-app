@@ -19,7 +19,19 @@ function initMap(){
   
 };
 
-function addMarker(location){};
+function addMarker(location){
+  // 1. Extract latitude and longitude from location
+  const latitude = location.latitude;
+  const longitude = location.longitude; 
+
+  
+  // 2. Create a Leaflet marker
+  L.marker([latitude,longitude])
+    .addTo(map)
+    .bindPopup(location.place)
+ 
+};
+
 
 function renderMarkers(locations){};
 
@@ -31,6 +43,7 @@ window.mapRenderer = {
   addMarker: addMarker,
   renderMarkers: renderMarkers
 };
+
 
 
 
