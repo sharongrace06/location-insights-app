@@ -21,7 +21,8 @@ function renderTable(){
     longitudeCell.textContent = location.longitude;
 
     const dateCell = document.createElement("td");
-      dateCell.textContent = location.createdAt;
+    const formattedDate = location.createdAt.toLocaleString();
+    dateCell.textContent = formattedDate;
 
     // to attach the cells to the rows 
     row.appendChild(placeCell);
@@ -39,3 +40,4 @@ function renderTable(){
 window.tableRenderer = {
   renderTable: renderTable,
 };
+
