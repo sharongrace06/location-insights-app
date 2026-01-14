@@ -5,8 +5,8 @@ function initMap(){
   // 1. Create map instance
   const map = L.map("map");
   
-// 2. Set initial view (lat, lng, zoom)
-  //map.setView([latitude, longitude], 5);
+  // 2. Set initial view (lat, lng, zoom)
+  map.setView([20.5937, 78.9629], 5);
 
   // 3. Attach a tile layer
   //L.tileLayer()
@@ -26,3 +26,4 @@ window.mapRenderer = {
   addMarker: addMarker,
   renderMarkers: renderMarkers
 };
+
