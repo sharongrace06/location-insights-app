@@ -71,7 +71,7 @@ form.addEventListener("submit", function(event){
   dataStore.addLocation(locationData);    // store the data 
   console.log(dataStore.getLocations());
   
-  mapRenderer.addMarker(locationData);  // update the map 
+  mapRenderer.renderMarkers(dataStore.getLocations());  // update the map 
 
   tableRenderer.renderTable(); // Update table
 
@@ -88,6 +88,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
