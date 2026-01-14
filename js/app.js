@@ -77,6 +77,9 @@ form.addEventListener("submit", function(event){
 });
 
   tableRenderer.renderTable();
+  mapRenderer.initMap();
+
+
 
 
 
