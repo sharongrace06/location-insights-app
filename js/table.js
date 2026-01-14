@@ -6,6 +6,18 @@ function renderTable(){
   // get the location
   const locations = dataStore.getLocations();
 
+  if(locations === ""){
+    const row = document.createElement("tr");
+    const cell = document.createElement("td");
+
+    cell.textContent = "No locations added yet";
+    cell.colSpan = 4;
+    
+    row.appendChild(cell);
+    tableBody.appendChild(row);
+    return;
+  };
+
    // Loop through locations
   locations.forEach(function(location){
     //creating the row:  one location → one row
@@ -40,4 +52,5 @@ function renderTable(){
 window.tableRenderer = {
   renderTable: renderTable,
 };
+
 
