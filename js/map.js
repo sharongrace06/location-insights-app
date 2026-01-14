@@ -3,7 +3,7 @@ console.log("map.js loaded");
 let map;
 function initMap(){
   // 1. Create map instance
-  const map = L.map("map");
+  map = L.map("map");
   
   // 2. Set initial view (lat, lng, zoom)
   map.setView([20.5937, 78.9629], 5);
@@ -31,5 +31,6 @@ window.mapRenderer = {
   addMarker: addMarker,
   renderMarkers: renderMarkers
 };
+
 
 
