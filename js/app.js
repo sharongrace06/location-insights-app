@@ -65,10 +65,16 @@ form.addEventListener("submit", function(event){
   console.log(dataStore.getLocations());
 
   tableRenderer.renderTable();
+  
+  // to clear out the input fields in the form once a value is added. 
 
+  placeInput.value = "";
+  latitudeInput.value = "";
+  longitudeInput.value = "";
   
   
 });
+
 
 
 
