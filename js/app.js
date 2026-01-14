@@ -74,8 +74,10 @@ form.addEventListener("submit", function(event){
   
 
 
-  tableRenderer.renderTable();
 });
+
+  tableRenderer.renderTable();
+
 
 
 
