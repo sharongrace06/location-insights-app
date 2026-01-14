@@ -1,6 +1,8 @@
 console.log("map.js loaded");
 
 let map;
+let markerLayer;  //container of markers
+
 function initMap(){
   // 1. Create map instance
   map = L.map("map");
@@ -15,6 +17,7 @@ function initMap(){
     attribution: "© OpenStreetMap contributors"
   }).addTo(map);
 
+  markerLayer = L.layerGroup().addTo(map);  // Create an empty box -> Put the box on the map -> Remember where the box is
 
   
 };
@@ -27,13 +30,18 @@ function addMarker(location){
   
   // 2. Create a Leaflet marker
   L.marker([latitude,longitude])
-    .addTo(map)
+    .addTo(markerLayer)
     .bindPopup(location.place)
  
 };
 
 
-function renderMarkers(locations){};
+function renderMarkers(locations){
+  markerLayer.clearLayers();
+  locations.forEach(function(location){
+    addMarker(location);});
+  
+};
 
 
 
@@ -43,6 +51,7 @@ window.mapRenderer = {
   addMarker: addMarker,
   renderMarkers: renderMarkers
 };
+
 
 
 
