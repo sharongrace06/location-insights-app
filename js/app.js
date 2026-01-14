@@ -7,6 +7,13 @@ const latitudeInput = document.getElementById("latitude");
 const longitudeInput = document.getElementById("longitude");
 const errorInput = document.getElementById("errorMessage");
 
+//APP STARTUP (runs ONCE)
+
+//initialize map once when app loads
+mapRenderer.initMap();
+//render table once on load (shows empty state)
+tableRenderer.renderTable();
+
 
 console.log(form);
 console.log(placeInput);
@@ -61,10 +68,12 @@ form.addEventListener("submit", function(event){
   
   // connecting dataStores.js with app.js 
   
-  dataStore.addLocation(locationData);
+  dataStore.addLocation(locationData);    // store the data 
   console.log(dataStore.getLocations());
   
-  mapRenderer.addMarker(locationData);
+  mapRenderer.addMarker(locationData);  // update the map 
+
+  tableRenderer.renderTable(); // Update table
 
 
   // to clear out the input fields in the form once a value is added. 
@@ -77,8 +86,9 @@ form.addEventListener("submit", function(event){
 
 });
 
-  tableRenderer.renderTable();
-  mapRenderer.initMap();
+  
+  
+
 
 
 
