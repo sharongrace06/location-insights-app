@@ -36,6 +36,16 @@ function saveToStorage(){
   
 };
 
+function deleteLocation(id){
+  const filteredLocations = locations.filter(function(location){
+    return location.id !== id; 
+  });
+  locations.length = 0;
+  locations.push(...filteredLocations);
+  
+  saveToStorage();
+};
+
 
 
 window.dataStore = {
@@ -45,6 +55,7 @@ window.dataStore = {
   saveToStorage: saveToStorage
   
 };
+
 
 
 
