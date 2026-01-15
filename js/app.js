@@ -26,7 +26,8 @@ mapRenderer.renderMarkers(dataStore.getLocations());
 // Adding the delete button 
 tableSection.addEventListener("click", function(event){
   const clickedElement = event.target;
-  if(clickedElement.matches === "BUTTON"){
+  
+  if(clickedElement.matches("button")){
     event.preventDefault();    //  stop form submit
     event.stopPropagation();    //stop bubbling
 
@@ -113,6 +114,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
