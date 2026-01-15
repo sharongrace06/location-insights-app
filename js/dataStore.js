@@ -20,10 +20,15 @@ function loadFromStorage(){
   if(storedData){
     locations = JSON.parse(storedData);      // if there is data then it will convert text back to real data (storedData is text)
   };                                         //JSON.parse() converts it into array 
-
-
-  
 };                              
+
+function saveToStorage(){
+  // to convert location to text
+  const textLocation =  JSON.stringify(locations);
+  // save to localStorage  
+  const saveToStore = localStorage.setItem("locations", textLocation)
+  
+};
 
 
 
@@ -31,5 +36,6 @@ window.dataStore = {
   addLocation : addLocation,
   getLocations : getLocations
 };
+
 
 
