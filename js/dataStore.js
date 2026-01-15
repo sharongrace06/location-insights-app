@@ -34,8 +34,12 @@ function saveToStorage(){
 
 window.dataStore = {
   addLocation : addLocation,
-  getLocations : getLocations
+  getLocations : getLocations,
+  loadFromStorage: loadFromStorage,
+  saveToStorage: saveToStorage
+  
 };
+
 
 
 
