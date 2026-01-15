@@ -26,7 +26,7 @@ function saveToStorage(){
   // to convert location to text
   const textLocation =  JSON.stringify(locations);
   // save to localStorage  
-  const saveToStore = localStorage.setItem("locations", textLocation)
+  const saveToStore = localStorage.setItem("locations", textLocation);
   
 };
 
@@ -36,6 +36,7 @@ window.dataStore = {
   addLocation : addLocation,
   getLocations : getLocations
 };
+
 
 
 
