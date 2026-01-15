@@ -40,7 +40,7 @@ function renderTable(){
     const deleteCell = document.createElement("td");
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
-    
+    deleteButton.type = "button";
     // attach the id invisibly
     deleteButton.dataset.id = location.id;
     deleteCell.appendChild(deleteButton);
@@ -63,6 +63,7 @@ function renderTable(){
 window.tableRenderer = {
   renderTable: renderTable,
 };
+
 
 
 
