@@ -65,6 +65,7 @@ form.addEventListener("submit", function(event){
 
   // Create location object
   const locationData = {
+    id : Date.now(),
     place : place,
     latitude : latitude,
     longitude : longitude,
@@ -94,6 +95,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
