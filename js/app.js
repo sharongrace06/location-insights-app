@@ -9,6 +9,9 @@ const errorInput = document.getElementById("errorMessage");
 
 //APP STARTUP (runs ONCE)
 
+//initialize the stored data the user typed in 
+dataStore.loadFromStorage();
+
 //initialize map once when app loads
 mapRenderer.initMap();
 //render table once on load (shows empty state)
@@ -88,6 +91,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
