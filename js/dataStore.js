@@ -5,6 +5,7 @@ const locations = [];
 
 function addLocation(location){
   locations.push(location);
+  saveToStorage();
 };
 
 
@@ -39,6 +40,7 @@ window.dataStore = {
   saveToStorage: saveToStorage
   
 };
+
 
 
 
