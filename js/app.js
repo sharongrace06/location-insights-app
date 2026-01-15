@@ -6,7 +6,7 @@ const placeInput = document.getElementById("placeName");
 const latitudeInput = document.getElementById("latitude");
 const longitudeInput = document.getElementById("longitude");
 const errorInput = document.getElementById("errorMessage");
-const tableBody = document.getElementById("locationTableBody");
+const tableBodyEl = document.getElementById("locationTableBody");
 
 
 //APP STARTUP (runs ONCE)
@@ -23,7 +23,7 @@ tableRenderer.renderTable();
 mapRenderer.renderMarkers(dataStore.getLocations());
 
 // Adding the delete button 
-tableBody.addEventListener("click", function(event){
+tableBodyEl.addEventListener("click", function(event){
   const clickedElement = event.target;
   if(clickedElement.matches === "BUTTON"){
     const id = Number(clickedElement.dataset.id);       //if the clicked thing is a Delete button, get its ID, delete that location
@@ -109,6 +109,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
