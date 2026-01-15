@@ -17,6 +17,9 @@ mapRenderer.initMap();
 //render table once on load (shows empty state)
 tableRenderer.renderTable();
 
+// rendering the map markers 
+mapRenderer.renderMarkers(dataStore.getLocations());
+
 
 console.log(form);
 console.log(placeInput);
@@ -91,6 +94,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
