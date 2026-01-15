@@ -11,7 +11,7 @@ function renderTable(){
     const cell = document.createElement("td");
 
     cell.textContent = "No locations added yet";
-    cell.colSpan = 4;
+    cell.colSpan = 5;
     
     row.appendChild(cell);
     tableBody.appendChild(row);
@@ -33,14 +33,25 @@ function renderTable(){
     longitudeCell.textContent = location.longitude;
 
     const dateCell = document.createElement("td");
-    const formattedDate = location.createdAt.toLocaleString();
+    const formattedDate = new Date(location.createdAt).toLocaleString();
     dateCell.textContent = formattedDate;
+
+    //adding the delete button
+    const deleteCell = document.createElement("td");
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    
+    // attach the id invisibly
+    deleteButton.dataset.id = location.id;
+    deleteCell.appendChild(deleteButton);
 
     // to attach the cells to the rows 
     row.appendChild(placeCell);
     row.appendChild(latitudeCell);
     row.appendChild(longitudeCell);
     row.appendChild(dateCell);
+    row.appendChild(deleteCell);
+
 
     // to attach the table to the rows 
     tableBody.appendChild(row);
@@ -52,6 +63,7 @@ function renderTable(){
 window.tableRenderer = {
   renderTable: renderTable,
 };
+
 
 
 
