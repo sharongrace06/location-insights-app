@@ -19,8 +19,13 @@ function loadFromStorage(){
   const storedData = localStorage.getItem("locations");  //localStorage → browser storage
 
   if(storedData){
-    locations = JSON.parse(storedData);      // if there is data then it will convert text back to real data (storedData is text)
-  };                                         //JSON.parse() converts it into array 
+    const parsedLocations = JSON.parse(storedData);    // if there is data then it will convert text back to real data (storedData is text)
+    //JSON.parse() converts it into array 
+    
+    locations.length = 0;            // clear existing array --> Set the number of items in this array to zero.
+    locations.push(...parsedLocations);      // refill it
+    
+  };                                         
 };                              
 
 function saveToStorage(){
@@ -40,6 +45,7 @@ window.dataStore = {
   saveToStorage: saveToStorage
   
 };
+
 
 
 
