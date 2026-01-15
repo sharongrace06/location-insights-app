@@ -20,7 +20,19 @@ tableRenderer.renderTable();
 // rendering the map markers 
 mapRenderer.renderMarkers(dataStore.getLocations());
 
+// Adding the delete button 
+tableBody.addEventListener("click", function(event){
+  const clickedElement = event.target;
+  if(clickedElement.tagName === "BUTTON"){
+    const id = Number(clickedElement.dataset.id);       //if the clicked thing is a Delete button, get its ID, delete that location
+    dataStore.deleteLocation(id);
+    tableRenderer.renderTable();
+    mapRenderer.renderMarkers(dataStore.getLocations());
+  }
+  
+});
 
+  
 console.log(form);
 console.log(placeInput);
 
@@ -95,6 +107,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
