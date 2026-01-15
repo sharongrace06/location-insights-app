@@ -27,6 +27,9 @@ mapRenderer.renderMarkers(dataStore.getLocations());
 tableSection.addEventListener("click", function(event){
   const clickedElement = event.target;
   if(clickedElement.matches === "BUTTON"){
+    event.preventDefault();    //  stop form submit
+    event.stopPropagation();    //stop bubbling
+
     const id = Number(clickedElement.dataset.id);       //if the clicked thing is a Delete button, get its ID, delete that location
     dataStore.deleteLocation(id);
     tableRenderer.renderTable();
@@ -110,6 +113,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
