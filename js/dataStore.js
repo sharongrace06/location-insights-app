@@ -52,9 +52,11 @@ window.dataStore = {
   addLocation : addLocation,
   getLocations : getLocations,
   loadFromStorage: loadFromStorage,
-  saveToStorage: saveToStorage
+  saveToStorage: saveToStorage,
+  deleteLocation: deleteLocation
   
 };
+
 
 
 
