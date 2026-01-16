@@ -53,18 +53,19 @@ main {
 
 #table-section {
   flex: 2;
-  overflow-x: auto; /* horizontal scroll instead of overlap */
 }
 
+/* Scroll container MUST be here */
 .table-wrapper {
   max-height: 800px;
   overflow-y: auto;
+  overflow-x: auto;
   border: 2px solid #000000;
 }
 
 #table-section table {
-  width: max-content;
-  min-width: 100%;
+  width: max-content; /* grow to fit columns */
+  min-width: 100%;    /* but not smaller than container */
   border-collapse: collapse;
   font-size: 0.9rem;
 }
@@ -115,7 +116,7 @@ main {
 /* Column width control */
 #table-section th:nth-child(1),
 #table-section td:nth-child(1) {
-  min-width: 200px;
+  min-width: 220px;
 }
 
 #table-section th:nth-child(2),
@@ -129,6 +130,8 @@ main {
 #table-section td:nth-child(4) {
   min-width: 180px;
 }
+
+
 
 
 
@@ -204,5 +207,6 @@ main {
   font-style: italic;
   line-height: 1.5;
 }
+
 
 
