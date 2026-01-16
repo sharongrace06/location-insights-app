@@ -5,7 +5,7 @@ function exportMap(){
   
   const mapElement = document.getElementById("map");
   
-  html2canvas(mapElement).then((canvas) => {
+  html2canvas(mapElement, {useCORS: true, allowTaint: true}).then((canvas) => {
     console.log("Canvas created:", canvas);
     
     const imageData = canvas.toDataURL("image/png");
@@ -17,4 +17,5 @@ function exportMap(){
     
   });
 };
+
 
