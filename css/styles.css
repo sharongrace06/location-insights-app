@@ -7,7 +7,7 @@
 }
 
 #map-section {
-  max-width: 950px;
+  max-width: none;
   margin: 2.5rem 0;
   flex: 1.2;
 }
@@ -178,6 +178,7 @@ main {
   width: 90px;
   text-align: center;
 }
+
 
 
 
