@@ -136,3 +136,74 @@ main {
     max-height: 420px;
   }
 }
+
+/* =========================
+   HEADER / INSTRUCTIONS
+========================= */
+
+.header-banner h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+}
+
+.header-instructions {
+  max-width: 800px;
+}
+
+.header-instructions p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.header-instructions ol {
+  padding-left: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   INPUT SECTION (RESTORE)
+========================= */
+
+#input-section {
+  margin: 2.5rem 0 3.5rem;
+}
+
+#input-section form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#input-section input {
+  min-width: 240px;
+  padding: 0.6rem 0.75rem;
+  font-size: 1rem;
+  border: 1.5px solid #cccccc;
+  border-radius: 12px;
+  outline: none;
+}
+
+#input-section input::placeholder {
+  color: #999999;
+}
+
+#input-section input:focus {
+  border-color: #000000;
+}
+
+#input-section button {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background-color: #ec5aa1;
+  color: #ffffff;
+}
+
+
+
