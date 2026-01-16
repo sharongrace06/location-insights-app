@@ -57,6 +57,33 @@
   letter-spacing: 0.5px;
 }
 
+.header-instructions {
+  max-width: 700px;
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+
+  background-color: #ffffff;
+}
+
+.header-instructions p {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.header-instructions ol {
+  margin: 0;
+  padding-left: 1.25rem;
+
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+
+
 
 
 
