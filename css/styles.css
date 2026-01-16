@@ -1,3 +1,26 @@
 #map {
   height: 400px;
 }
+
+#input-section {
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+#input-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#input-section button {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
