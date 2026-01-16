@@ -9,7 +9,7 @@
 #map-section {
   max-width: 950px;
   margin: 2.5rem 0;
-  flex: 1.2;
+  flex: 2;
 }
 
 
@@ -116,6 +116,8 @@
 
 #table-section {
   flex: 1;
+  max-height: 800px;
+  overflow-y: auto;
 }
 
 #table-section table {
@@ -159,6 +161,7 @@ main {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
+
 
 
 
