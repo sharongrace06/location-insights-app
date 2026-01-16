@@ -1,6 +1,16 @@
 #map {
-  height: 400px;
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* square */
+  max-height: 600px;
+
+  border: 2px solid #000000;
 }
+
+#map-section {
+  max-width: 600px;
+  margin: 2rem 0;
+}
+
 
 #input-section {
   max-width: 640px;
@@ -81,6 +91,7 @@
   font-size: 0.95rem;
   font-style: italic;
 }
+
 
 
 
