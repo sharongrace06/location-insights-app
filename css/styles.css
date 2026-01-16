@@ -1,11 +1,22 @@
-/* =======================
-   LAYOUT WRAPPER
-======================= */
+/* =========================
+   GLOBAL PAGE WRAPPER
+========================= */
+
+main {
+  max-width: 1400px;     /* centers + controls app width */
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* =========================
+   MAIN CONTENT LAYOUT
+========================= */
 
 #content-section {
   display: flex;
   gap: 3rem;
   align-items: flex-start;
+  justify-content: center;
 }
 
 /* Stack on mobile */
@@ -15,32 +26,31 @@
   }
 
   #map {
-    height: 60vh; /* better mobile experience */
+    height: 60vh;
   }
 }
 
-/* =======================
-   MAP SECTION
-======================= */
+/* =========================
+   MAP (PRIMARY ELEMENT)
+========================= */
 
 #map-section {
-  flex: 1.5;        /* controls map width */
-  max-width: none;  /* CRITICAL: allow it to grow */
-  margin: 2.5rem 0;
+  flex: 3;              /* MAP IS THE MAIN FEATURE */
+  max-width: none;
 }
 
 #map {
   width: 100%;
-  height: 800px;    /* matches table height */
+  height: 800px;
   border: 2px solid #000000;
 }
 
-/* =======================
-   TABLE SECTION
-======================= */
+/* =========================
+   TABLE (SECONDARY)
+========================= */
 
 #table-section {
-  flex: 2.5;        /* table wider than map */
+  flex: 2;
 }
 
 .table-wrapper {
@@ -95,9 +105,9 @@
   text-align: center;
 }
 
-/* =======================
+/* =========================
    INPUT SECTION
-======================= */
+========================= */
 
 #input-section {
   max-width: 640px;
@@ -136,9 +146,9 @@
   color: #ffffff;
 }
 
-/* =======================
+/* =========================
    HEADER
-======================= */
+========================= */
 
 .header-banner {
   background-color: #000000;
@@ -166,13 +176,4 @@
   font-size: 1.25rem;
   font-style: italic;
   line-height: 1.5;
-}
-
-/* =======================
-   PAGE PADDING
-======================= */
-
-main {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
