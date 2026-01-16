@@ -51,6 +51,7 @@ main {
 
 #table-section {
   flex: 2;
+  overflow-x: auto; /* IMPORTANT: allow horizontal scroll */
 }
 
 .table-wrapper {
@@ -59,10 +60,12 @@ main {
   border: 2px solid #000000;
 }
 
+/* Lock column sizing logic */
 #table-section table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
+  table-layout: fixed; /* CRITICAL */
 }
 
 #table-section thead th {
@@ -88,10 +91,12 @@ main {
 #table-section th,
 #table-section td {
   border-right: 1px solid #dddddd;
-  word-break: break-word;
   vertical-align: top;
+  white-space: normal;
+  word-break: normal;
 }
 
+/* Numeric columns */
 #table-section tbody td:nth-child(2),
 #table-section tbody td:nth-child(3) {
   text-align: right;
@@ -99,11 +104,34 @@ main {
   white-space: nowrap;
 }
 
+/* Delete column */
 #table-section th:last-child,
 #table-section td:last-child {
   width: 90px;
   text-align: center;
 }
+
+/* =========================
+   COLUMN WIDTH CONTROL
+========================= */
+
+#table-section th:nth-child(1),
+#table-section td:nth-child(1) {
+  min-width: 180px; /* Place */
+}
+
+#table-section th:nth-child(2),
+#table-section td:nth-child(2),
+#table-section th:nth-child(3),
+#table-section td:nth-child(3) {
+  min-width: 120px; /* Latitude / Longitude */
+}
+
+#table-section th:nth-child(4),
+#table-section td:nth-child(4) {
+  min-width: 160px; /* Date */
+}
+
 
 /* =========================
    INPUT SECTION
@@ -177,3 +205,4 @@ main {
   font-style: italic;
   line-height: 1.5;
 }
+
