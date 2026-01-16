@@ -39,6 +39,12 @@ tableSection.addEventListener("click", function(event){
   
 });
 
+// event listener for the export- map button 
+
+const downloadMapBtn = document.getElementById("download-map-btn");
+downloadMapBtn.addEventListener("click", () => {
+  exportMap();
+});
   
 console.log(form);
 console.log(placeInput);
@@ -114,6 +120,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
