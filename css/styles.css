@@ -9,8 +9,11 @@
 #map-section {
   max-width: 750px;
   margin: 2.5rem 0;
+  flex: 1.2;
 }
 
+
+/* input section */
 
 #input-section {
   max-width: 640px;
@@ -55,6 +58,7 @@
   color: #ffffff;
 }
 
+/* header section */
 
 .header-banner {
   background-color: #000000;
@@ -94,6 +98,52 @@
   font-size: 1.25rem;
   font-style: italic;
 }
+
+/* table style  */
+
+@media (max-width: 900px) {
+  #content-section {
+    flex-direction: column;
+  }
+}
+
+
+#content-section {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+#table-section {
+  flex: 1;
+}
+
+#table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+#table-section thead th {
+  text-align: left;
+  padding: 0.6rem 0.5rem;
+
+  border-bottom: 2px solid #000000;
+  font-weight: 600;
+}
+
+#table-section tbody td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #dddddd;
+}
+
+#table-section tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+
+
+
 
 
 
