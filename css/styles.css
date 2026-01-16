@@ -45,13 +45,15 @@ main {
   border: 2px solid #000000;
 }
 
+
+
 /* =========================
    TABLE (SECONDARY)
 ========================= */
 
 #table-section {
   flex: 2;
-  overflow-x: auto; /* IMPORTANT: allow horizontal scroll */
+  overflow-x: auto; /* horizontal scroll instead of overlap */
 }
 
 .table-wrapper {
@@ -60,12 +62,11 @@ main {
   border: 2px solid #000000;
 }
 
-/* Lock column sizing logic */
 #table-section table {
-  width: 100%;
+  width: max-content;
+  min-width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
-  table-layout: fixed; /* CRITICAL */
 }
 
 #table-section thead th {
@@ -111,26 +112,24 @@ main {
   text-align: center;
 }
 
-/* =========================
-   COLUMN WIDTH CONTROL
-========================= */
-
+/* Column width control */
 #table-section th:nth-child(1),
 #table-section td:nth-child(1) {
-  min-width: 180px; /* Place */
+  min-width: 200px;
 }
 
 #table-section th:nth-child(2),
 #table-section td:nth-child(2),
 #table-section th:nth-child(3),
 #table-section td:nth-child(3) {
-  min-width: 120px; /* Latitude / Longitude */
+  min-width: 140px;
 }
 
 #table-section th:nth-child(4),
 #table-section td:nth-child(4) {
-  min-width: 160px; /* Date */
+  min-width: 180px;
 }
+
 
 
 /* =========================
@@ -205,4 +204,5 @@ main {
   font-style: italic;
   line-height: 1.5;
 }
+
 
