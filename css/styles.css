@@ -110,7 +110,7 @@
 
 #content-section {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   align-items: flex-start;
 }
 
@@ -147,6 +147,14 @@
 #table-section td {
   border-right: 1px solid #dddddd;
 }
+
+#table-section tbody td:nth-child(2),
+#table-section tbody td:nth-child(3) {
+  text-align: right;
+  font-family: monospace;
+}
+
+
 
 
 
