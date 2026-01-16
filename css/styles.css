@@ -1,13 +1,13 @@
 #map {
   width: 100%;
   aspect-ratio: 1 / 1;   /* square */
-  max-height: 650px;
+  max-height: 750px;
 
   border: 2px solid #000000;
 }
 
 #map-section {
-  max-width: 750px;
+  max-width: 820px;
   margin: 2.5rem 0;
   flex: 1.2;
 }
@@ -159,6 +159,7 @@ main {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
+
 
 
 
