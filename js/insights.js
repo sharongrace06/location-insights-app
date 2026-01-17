@@ -10,8 +10,8 @@ function getTotalLocations(locations){
 function getSequentialPath(locations) {
   const copy =  [...locations]; // create a copy of the locations array
   copy.sort((a,b) => {
-    const timeA = new Date(a.timestamp).getTime();
-    const timeB = new Date(b.timestamp).getTime();
+    const timeA = new Date(a.createdAt).getTime();
+    const timeB = new Date(b.createdAt).getTime();
     if (timeA < timeB) return -1;
     if (timeA > timeB) return 1;
     return 0;
@@ -20,6 +20,7 @@ function getSequentialPath(locations) {
   const locationPath = copy.map(item => {
     return [item.latitude, item.longitude];
 });
+  return locationPath;
   
 };
 
@@ -55,6 +56,7 @@ console.log(
 console.log(
   window.insights.getSequentialPath(dataStore.getLocations())
 );
+
 
 
 
