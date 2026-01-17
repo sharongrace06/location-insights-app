@@ -232,4 +232,18 @@ main {
 }
 
 
+/* =========================
+   MAP 2  SECTION (ORIGINAL)
+========================= */
+
+#insights-map {
+  width: 100%;
+  height: 500px;   /* or any fixed height */
+  margin-top: 2rem;
+  border: 2px solid #000;
+}
+
+
+
+
 
