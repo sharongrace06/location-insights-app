@@ -26,6 +26,9 @@ mapRenderer.renderMarkers(dataStore.getLocations());
 //rendering map 2 with insights 
 mapRenderer.initInsightsMap();
 
+mapRenderer.renderInsightsHeatMap(dataStore.getLocations());
+
+
 
 // Adding the delete button 
 tableSection.addEventListener("click", function(event){
@@ -39,6 +42,8 @@ tableSection.addEventListener("click", function(event){
     dataStore.deleteLocation(id);
     tableRenderer.renderTable();
     mapRenderer.renderMarkers(dataStore.getLocations());
+    mapRenderer.renderInsightsHeatMap(dataStore.getLocations());
+
   }
   
 });
@@ -111,6 +116,9 @@ form.addEventListener("submit", function(event){
 
   tableRenderer.renderTable(); // Update table
 
+  mapRenderer.renderInsightsHeatMap(dataStore.getLocations()); //  update map2 
+
+
 
   // to clear out the input fields in the form once a value is added. 
 
@@ -124,6 +132,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
