@@ -23,6 +23,10 @@ tableRenderer.renderTable();
 // rendering the map markers 
 mapRenderer.renderMarkers(dataStore.getLocations());
 
+//rendering map 2 with insights 
+mapRenderer.initInsightsMap();
+
+
 // Adding the delete button 
 tableSection.addEventListener("click", function(event){
   const clickedElement = event.target;
@@ -120,6 +124,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
