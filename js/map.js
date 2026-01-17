@@ -2,8 +2,9 @@ console.log("map.js loaded");
 
 let map;
 let markerLayer;  //container of markers
+let insightsMap;
 
-let heatLayer = null;
+let insightsHeatLayer = null;
 let growthPathLayer = null;
 
 
@@ -48,18 +49,46 @@ function renderMarkers(locations){
 };
 
 
-function renderHeatMap(locations) {
-  // 1. remove existing heat layer (if any)
-  // 2. get heat points from insights
-  // 3. create heat layer
-  // 4. add to map
+
+function initInsightsMap(){
+  // create the map instance 
+  insightsMap = L.map("insights-map");
+
+// 2. Set initial view (lat, lng, zoom)
+  insightsMap.setView([20.5937, 78.9629], 5);
+
+  // 3. Attach tile layer
+  L.tileLayer(
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    {
+      attribution: "© OpenStreetMap contributors"
+    }
+  ).addTo(insightsMap);
+  
 };
 
+
 function renderGrowthPath(locations) {
+
+};
+
+function  renderInsightsHeatMap(locations){
   // 1. remove existing path layer (if any)
+  
+  if (insightsHeatLayer) {
+    insightsMap.removeLayer(insightsHeatLayer);
+  }
   // 2. get ordered path from insights
-  // 3. create polyline
-  // 4. add to map
+  const heatPoints = window.insights.getHeatPoints(locations);
+  // 3. Create heat layer
+  insightsHeatLayer = L.heatLayer(heatPoints, {
+    radius: 25,
+    blur: 15,
+    maxZoom: 17
+  });
+
+  // 4. Add to insights map
+  insightsHeatLayer.addTo(insightsMap);
 };
 
 
@@ -69,10 +98,13 @@ window.mapRenderer = {
   initMap: initMap,
   addMarker: addMarker,
   renderMarkers: renderMarkers,
-  renderHeatMap: renderHeatMap,
+  
+  initInsightsMap: initInsightsMap,
+  renderInsightsHeatMap: renderInsightsHeatMap,
   renderGrowthPath: renderGrowthPath
   
 };
+
 
 
 
