@@ -59,6 +59,12 @@ const downloadMapBtn = document.getElementById("download-map-btn");
 downloadMapBtn.addEventListener("click", () => {
   exportMap();
 });
+
+// event listener for the export map2 button 
+const downloadMap2Btn = document.getElementById("download-map2-btn");
+downloadMap2Btn.addEventListener("click", () => {
+  exportInsightsMap();
+});
   
 console.log(form);
 console.log(placeInput);
@@ -139,6 +145,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
