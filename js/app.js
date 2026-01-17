@@ -26,7 +26,10 @@ mapRenderer.renderMarkers(dataStore.getLocations());
 //rendering map 2 with insights 
 mapRenderer.initInsightsMap();
 
+//map 2 insighst 
 mapRenderer.renderInsightsHeatMap(dataStore.getLocations());
+mapRenderer.renderGrowthPath(dataStore.getLocations());
+
 
 
 
@@ -43,6 +46,8 @@ tableSection.addEventListener("click", function(event){
     tableRenderer.renderTable();
     mapRenderer.renderMarkers(dataStore.getLocations());
     mapRenderer.renderInsightsHeatMap(dataStore.getLocations());
+    mapRenderer.renderGrowthPath(dataStore.getLocations());
+
 
   }
   
@@ -117,6 +122,8 @@ form.addEventListener("submit", function(event){
   tableRenderer.renderTable(); // Update table
 
   mapRenderer.renderInsightsHeatMap(dataStore.getLocations()); //  update map2 
+  mapRenderer.renderGrowthPath(dataStore.getLocations());      // update map2 
+
 
 
 
@@ -132,6 +139,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
