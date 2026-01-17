@@ -50,12 +50,8 @@ window.insights = {
   
 };
 
-console.log(
-  window.insights.getHeatPoints(dataStore.getLocations()));
 
-console.log(
-  window.insights.getSequentialPath(dataStore.getLocations())
-);
+
 
 
 
