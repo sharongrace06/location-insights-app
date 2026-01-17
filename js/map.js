@@ -3,6 +3,10 @@ console.log("map.js loaded");
 let map;
 let markerLayer;  //container of markers
 
+let heatLayer = null;
+let growthPathLayer = null;
+
+
 function initMap(){
   // 1. Create map instance
   map = L.map("map");
@@ -44,13 +48,32 @@ function renderMarkers(locations){
 };
 
 
+function renderHeatMap(locations) {
+  // 1. remove existing heat layer (if any)
+  // 2. get heat points from insights
+  // 3. create heat layer
+  // 4. add to map
+};
+
+function renderGrowthPath(locations) {
+  // 1. remove existing path layer (if any)
+  // 2. get ordered path from insights
+  // 3. create polyline
+  // 4. add to map
+};
+
+
 
 
 window.mapRenderer = {
   initMap: initMap,
   addMarker: addMarker,
-  renderMarkers: renderMarkers
+  renderMarkers: renderMarkers,
+  renderHeatMap: renderHeatMap,
+  renderGrowthPath: renderGrowthPath
+  
 };
+
 
 
 
