@@ -69,8 +69,31 @@ function initInsightsMap(){
 
 
 function renderGrowthPath(locations) {
+  // 1. Remove existing growth path (if any)
+  if (growthPathLayer) {
+    insightsMap.removeLayer(growthPathLayer);
+  }
+
+  // 2. Get ordered coordinates from insights
+  const pathCoordinates = window.insights.getSequentialPath(locations);
+
+  // Guard: need at least 2 points to draw a line
+  if (pathCoordinates.length < 2) {
+    return;
+  }
+
+  // 3. Create polyline
+  growthPathLayer = L.polyline(pathCoordinates, {
+    color: "#2563eb",   // calm blue
+    weight: 3,
+    opacity: 0.8
+  });
+
+  // 4. Add to insights map
+  growthPathLayer.addTo(insightsMap);
 
 };
+
 
 function  renderInsightsHeatMap(locations){
   // 1. remove existing path layer (if any)
@@ -104,6 +127,7 @@ window.mapRenderer = {
   renderGrowthPath: renderGrowthPath
   
 };
+
 
 
 
