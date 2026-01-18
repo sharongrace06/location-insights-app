@@ -243,6 +243,10 @@ main {
   border: 2px solid #000;
 }
 
+#insights-section {
+  position: relative;
+}
+
 
 #insights-legend {
   position: absolute;
@@ -273,6 +277,7 @@ main {
   background: black;
   margin-top: 6px;
 }
+
 
 
 
