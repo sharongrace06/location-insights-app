@@ -77,12 +77,23 @@ downloadMapBtn.addEventListener("click", () => {
 // Event listener for the toggles -> Insights map 
 heatmapToggle.addEventListener("change", () => {
   showHeatmap = heatmapToggle.checked;
-  renderApplicationState();
+  if(!showHeatmap){
+    mapRenderer.removeHeatmap();
+  } else {
+    renderApplicationState();
+  }
+
 });
 
 pathToggle.addEventListener("change", () => {
   showGrowthPath = pathToggle.checked;
-  renderApplicationState();
+  
+  if (!showGrowthPath) {
+    mapRenderer.removeGrowthPath();
+  } else {
+    renderApplicationState();
+  }
+  
 });
 
 
@@ -163,6 +174,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
