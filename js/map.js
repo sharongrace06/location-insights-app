@@ -114,6 +114,21 @@ function  renderInsightsHeatMap(locations){
   insightsHeatLayer.addTo(insightsMap);
 };
 
+function removeHeatmap() {
+  if (insightsHeatLayer) {
+    insightsMap.removeLayer(insightsHeatLayer);
+    heatmapLayer = null;
+  }
+}
+
+function removeGrowthPath() {
+  if (growthPathLayer) {
+    insightsMap.removeLayer(growthPathLayer);
+    growthPathLayer = null;
+  }
+}
+
+
 
 
 
@@ -124,9 +139,12 @@ window.mapRenderer = {
   
   initInsightsMap: initInsightsMap,
   renderInsightsHeatMap: renderInsightsHeatMap,
-  renderGrowthPath: renderGrowthPath
+  renderGrowthPath: renderGrowthPath,
+  removeHeatmap: removeHeatmap,
+  removeGrowthPath: removeGrowthPath,
   
 };
+
 
 
 
