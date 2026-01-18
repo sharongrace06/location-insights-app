@@ -37,6 +37,39 @@ The result is a tool that supports ongoing monthly tracking while remaining easy
 
 ---
 
+## Case Study: Replacing Spreadsheets with Visual Location Insights
+
+### Context
+
+The client’s team previously relied on spreadsheets to track locations across different countries. While functional, this approach made it hard to quickly validate coordinates, spot geographic patterns, or explain insights to stakeholders.
+
+The requirement was not for a complex analytics platform, but for a **clear, visual, and repeatable workflow** that could be used every month.
+
+### Challenges
+
+* Spreadsheets provided no visual verification of locations
+* Hard to understand density or geographic spread
+* No intuitive way to see how locations evolved over time
+* Data needed to remain local due to sensitivity
+
+### Approach
+
+I designed a client-side application that:
+
+* Uses interactive maps for immediate visual validation
+* Separates raw data entry (Main Map) from analysis (Insights Map)
+* Computes insights using pure logic, independent of UI or mapping libraries
+* Keeps all data local using browser storage to meet security expectations
+
+### Outcome
+
+* Monthly location tracking became visual and intuitive
+* Errors in coordinates were easier to spot and correct
+* Insights could be shared clearly within the team
+* The tool replaced spreadsheets for this workflow
+
+---
+
 ## Key Features
 
 ### Location Management
@@ -135,4 +168,3 @@ When deployed this way:
 ## Author
 
 Built as a portfolio and freelancing case study to demonstrate frontend engineering fundamentals and client-ready thinking.
-
