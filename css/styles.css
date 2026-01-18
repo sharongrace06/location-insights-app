@@ -257,6 +257,9 @@ main {
   border: 1px solid #ccc;
   font-size: 12px;
   max-width: 220px;
+  z-index: 1000
+
+   
 }
 
 .legend-item {
@@ -277,6 +280,7 @@ main {
   background: black;
   margin-top: 6px;
 }
+
 
 
 
