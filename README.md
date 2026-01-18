@@ -1,4 +1,6 @@
 # Location Insights App
+🔗 **Live Demo:** https://sharongrace06.github.io/location-insights-app/
+   
 
 ## Overview
 
