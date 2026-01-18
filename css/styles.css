@@ -244,6 +244,38 @@ main {
 }
 
 
+#insights-legend {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: #fff;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  max-width: 220px;
+}
+
+.legend-item {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  background: red;
+}
+
+.legend-line {
+  width: 16px;
+  height: 2px;
+  background: black;
+  margin-top: 6px;
+}
+
+
+
 
 
 
