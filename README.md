@@ -70,6 +70,42 @@ I designed a client-side application that:
 
 ---
 
+## Why This Solution Over Spreadsheets
+
+### Spreadsheet-Based Tracking (Before)
+
+* Locations existed only as rows and coordinates
+* No visual way to verify correctness of data
+* Geographic patterns were hard to detect
+* Explaining insights required manual screenshots or explanations
+* Error-prone when tracking multiple countries over time
+
+### Location Insights App (After)
+
+* Immediate visual validation of locations on a map
+* Clear separation between data entry and analysis
+* Heatmap reveals density patterns instantly
+* Growth path shows how locations evolve over time
+* Easier collaboration and explanation within the team
+
+The shift from spreadsheets to a visual tool significantly reduced ambiguity and improved the team’s ability to reason about geographic data.
+
+---
+
+## What I Would Build Next (If This Scaled)
+
+If this tool were expanded for a larger organization or long-term use, the next steps would include:
+
+* User authentication and role-based access
+* Cloud-based persistence with optional encryption
+* Filters by time range, region, or category
+* Versioned exports and reporting
+* Mobile-responsive layout for field usage
+
+These extensions would build on the existing architecture without requiring a full rewrite.
+
+---
+
 ## Key Features
 
 ### Location Management
