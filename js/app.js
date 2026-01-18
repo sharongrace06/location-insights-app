@@ -10,6 +10,17 @@ const errorInput = document.getElementById("errorMessage");
 const tableSection = document.getElementById("table-section");
 
 
+function renderApplicationState(){
+  const locations = dataStore.getLocations();
+  
+  tableRenderer.renderTable();    //render table once on load (shows empty state)
+  mapRenderer.renderMarkers(locations);    // rendering the map markers 
+  //Rendering map 2 insighst 
+  mapRenderer.renderInsightsHeatMap(locations);
+  mapRenderer.renderGrowthPath(locations);
+};
+
+
 //APP STARTUP (runs ONCE)
 
 //initialize the stored data the user typed in 
@@ -17,19 +28,11 @@ dataStore.loadFromStorage();
 
 //initialize map once when app loads
 mapRenderer.initMap();
-//render table once on load (shows empty state)
-tableRenderer.renderTable();
-
-// rendering the map markers 
-mapRenderer.renderMarkers(dataStore.getLocations());
 
 //rendering map 2 with insights 
 mapRenderer.initInsightsMap();
 
-//map 2 insighst 
-mapRenderer.renderInsightsHeatMap(dataStore.getLocations());
-mapRenderer.renderGrowthPath(dataStore.getLocations());
-
+renderApplicationState();
 
 
 
@@ -43,10 +46,7 @@ tableSection.addEventListener("click", function(event){
 
     const id = Number(clickedElement.dataset.id);       //if the clicked thing is a Delete button, get its ID, delete that location
     dataStore.deleteLocation(id);
-    tableRenderer.renderTable();
-    mapRenderer.renderMarkers(dataStore.getLocations());
-    mapRenderer.renderInsightsHeatMap(dataStore.getLocations());
-    mapRenderer.renderGrowthPath(dataStore.getLocations());
+    renderApplicationState();
 
 
   }
@@ -121,16 +121,9 @@ form.addEventListener("submit", function(event){
   // connecting dataStores.js with app.js 
   
   dataStore.addLocation(locationData);    // store the data 
-  console.log(dataStore.getLocations());
   
-  mapRenderer.renderMarkers(dataStore.getLocations());  // update the map 
-
-  tableRenderer.renderTable(); // Update table
-
-  mapRenderer.renderInsightsHeatMap(dataStore.getLocations()); //  update map2 
-  mapRenderer.renderGrowthPath(dataStore.getLocations());      // update map2 
-
-
+  console.log(dataStore.getLocations());
+  renderApplicationState();
 
 
   // to clear out the input fields in the form once a value is added. 
@@ -140,11 +133,11 @@ form.addEventListener("submit", function(event){
   longitudeInput.value = "";
   
 
-
 });
 
   
   
+
 
 
 
