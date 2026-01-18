@@ -9,12 +9,26 @@ const errorInput = document.getElementById("errorMessage");
 
 const tableSection = document.getElementById("table-section");
 
+const heatmapToggle = document.getElementById("toggle-heatmap");
+const pathToggle = document.getElementById("toggle-path");
+let showHeatmap = true;
+let showGrowthPath = true;
+
 
 function renderApplicationState(){
   const locations = dataStore.getLocations();
   
   tableRenderer.renderTable();    //render table once on load (shows empty state)
   mapRenderer.renderMarkers(locations);    // rendering the map markers 
+  
+  if(showHeatmap){
+    mapRenderer.renderInsightsHeatMap(locations);
+  }
+  if(showGrowthPath){
+    mapRenderer.renderGrowthPath(locations);
+  }
+  
+  
   //Rendering map 2 insighst 
   mapRenderer.renderInsightsHeatMap(locations);
   mapRenderer.renderGrowthPath(locations);
@@ -59,6 +73,18 @@ const downloadMapBtn = document.getElementById("download-map-btn");
 downloadMapBtn.addEventListener("click", () => {
   exportMap();
 });
+
+// Event listener for the toggles -> Insights map 
+heatmapToggle.addEventListener("change", () => {
+  showHeatmap = heatmapToggle.checked;
+  renderApplicationState();
+});
+
+pathToggle.addEventListener("change", () => {
+  showGrowthPath = pathToggle.checked;
+  renderApplicationState();
+});
+
 
 // event listener for the export map2 button 
 const downloadMap2Btn = document.getElementById("download-map2-btn");
@@ -137,6 +163,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
