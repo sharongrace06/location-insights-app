@@ -27,11 +27,12 @@ function renderApplicationState(){
   if(showGrowthPath){
     mapRenderer.renderGrowthPath(locations);
   }
-  
+
+  insights.renderTotalLocations(locations);
   
   //Rendering map 2 insighst 
-  mapRenderer.renderInsightsHeatMap(locations);
-  mapRenderer.renderGrowthPath(locations);
+  //mapRenderer.renderInsightsHeatMap(locations);
+  //mapRenderer.renderGrowthPath(locations);
 };
 
 
@@ -174,6 +175,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
