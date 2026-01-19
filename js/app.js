@@ -28,7 +28,7 @@ function renderApplicationState(){
     mapRenderer.renderGrowthPath(locations);
   }
 
-  insights.renderTotalLocations(locations);
+  
   
   //Rendering map 2 insighst 
   //mapRenderer.renderInsightsHeatMap(locations);
@@ -175,6 +175,7 @@ form.addEventListener("submit", function(event){
 
   
   
+
 
 
 
