@@ -7,6 +7,7 @@ function getTotalLocations(locations){
 };
 
 // UI renderer for total locations
+console.log("Insights object:", window.insights);
 function renderTotalLocations(locations) {
   const totalEntriesEl = document.getElementById("total-entries");
   console.log("Total entries element:", totalEntriesEl);
@@ -61,9 +62,10 @@ window.insights = {
   getTotalLocations: getTotalLocations,
   getSequentialPath: getSequentialPath,
   getHeatPoints: getHeatPoints,
-  renderTotalLocations: renderTotalLocations,
+  renderTotalLocations: renderTotalLocations
   
 };
+
 
 
 
