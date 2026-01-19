@@ -281,6 +281,15 @@ main {
   margin-top: 6px;
 }
 
+.stats-board {
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #000;
+  font-size: 0.9rem;
+  background: #fff;
+}
+
+
 
 
 
