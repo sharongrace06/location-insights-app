@@ -9,6 +9,8 @@ function getTotalLocations(locations){
 // UI renderer for total locations
 function renderTotalLocations(locations) {
   const totalEntriesEl = document.getElementById("total-entries");
+  console.log("Total entries element:", totalEntriesEl);
+  
   if (!totalEntriesEl) return;
 
   const total = getTotalLocations(locations);
@@ -62,6 +64,7 @@ window.insights = {
   renderTotalLocations: renderTotalLocations,
   
 };
+
 
 
 
