@@ -6,6 +6,18 @@ function getTotalLocations(locations){
   
 };
 
+// UI renderer for total locations
+function renderTotalLocations(locations) {
+  const totalEntriesEl = document.getElementById("total-entries");
+  if (!totalEntriesEl) return;
+
+  const total = getTotalLocations(locations);
+
+  totalEntriesEl.innerHTML = `
+    <strong>📍 Total Locations:</strong> ${total}
+  `;
+}
+
 //This function converts raw location objects into a drawable path.
 function getSequentialPath(locations) {
   const copy =  [...locations]; // create a copy of the locations array
@@ -46,9 +58,11 @@ function getHeatPoints(locations) {
 window.insights = {
   getTotalLocations: getTotalLocations,
   getSequentialPath: getSequentialPath,
-  getHeatPoints: getHeatPoints
+  getHeatPoints: getHeatPoints,
+  renderTotalLocations: renderTotalLocations,
   
 };
+
 
 
 
