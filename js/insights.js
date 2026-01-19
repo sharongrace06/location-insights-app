@@ -6,20 +6,6 @@ function getTotalLocations(locations){
   
 };
 
-// UI renderer for total locations
-console.log("Insights object:", window.insights);
-function renderTotalLocations(locations) {
-  const totalEntriesEl = document.getElementById("total-entries");
-  console.log("Total entries element:", totalEntriesEl);
-  
-  if (!totalEntriesEl) return;
-
-  const total = getTotalLocations(locations);
-
-  totalEntriesEl.innerHTML = `
-    <strong>📍 Total Locations:</strong> ${total}
-  `;
-}
 
 //This function converts raw location objects into a drawable path.
 function getSequentialPath(locations) {
@@ -62,9 +48,10 @@ window.insights = {
   getTotalLocations: getTotalLocations,
   getSequentialPath: getSequentialPath,
   getHeatPoints: getHeatPoints,
-  renderTotalLocations: renderTotalLocations
+  
   
 };
+
 
 
 
